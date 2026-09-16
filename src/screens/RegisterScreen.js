@@ -57,6 +57,7 @@ export default function RegisterScreen({ navigation }) {
 
       // La navegación al Dashboard la maneja el listener de auth en Navigation.js
     } catch (err) {
+       console.log('Código de error real:', err.code, err.message); // <- agrega esto
       setError(traducirError(err.code));
     } finally {
       setLoading(false);
